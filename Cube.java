@@ -19,6 +19,23 @@ public class Cube {
     // It will have methods that are capable of altering
     // the matrices in a way that represents what the cube
     // would look like in the real world if one of its faces were turned.
+    
+    // ######################################################
+    // ##### New Content #####
+    // ######################################################
+
+    // One turn affects 5 of the matrices, all except the opposite side
+    // I think it might be a good idea to create a class that represents
+    // each side and would hold information regarding which other sides
+    // turning itself would affect. Basically the class would hold the 
+    // 3x3 matrix the represents itself and then also have some variables
+    // that point to the other sides it is conencted to. Then in cube.java
+    // there would be a turn method that takes a "Side" object as a parameter
+    // and then performs the neccesary changes for when that side is turned.
+
+    // ######################################################
+    // ######################################################
+    // ######################################################
   
     /*****
      * could use a for loop and possibly variables
@@ -43,7 +60,7 @@ public class Cube {
   
     // A matrix is essentially a 2D array so there will have
     // to be 6 2D matrices to represent the cube. Probably should
-    // refer to these matrices as top, bottom, left, right, front, and backtag
+    // refer to these matrices as top, bottom, left, right, front, and back
   
     // For the colors I'm thinkning:
     // 0 - White
