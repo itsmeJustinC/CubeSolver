@@ -3,6 +3,9 @@ public class Solver {
     private int[][] white = {{0, 0, 0},{0, 0, 0}, {0, 0, 0}};
     //class variables
     Cube cube;
+    String ollDot = "FRUruf";
+    String ollBar = "FRUruf";
+    String ollL = "FURurf";
       
     public Solver(Cube cube) {
         this.cube = cube;
@@ -28,18 +31,6 @@ public class Solver {
         return face.matrix[pos] == color;
     }
 
-    private void ollLAlgorithm() {
-        this.cube.algorithm("FURurf");
-    }
-
-    private void ollBar() {
-        this.cube.algorithm("FRUruf");
-    }
-
-    private void ollDot() {
-        this.cube.algorithm("FURurf");
-    }
-
     private void solveWhiteCross() {
         //
     }
@@ -58,17 +49,17 @@ public class Solver {
                     // TODO perform counter clockwise turn
                 }
 
-                ollLAlgorithm();
+                this.cube.algorithm(ollL);
             } else {
                 if (!color(face, 1, this.cube.YELLOW)) {
-                    ollDot();
+                    this.cube.algorithm(ollDot);
                     // TODO perform turn
-                    ollBar();
+                    this.cube.algorithm(ollBar);
                 }
             }
         } else {
             if (!color(face, 1, this.cube.YELLOW)) {
-                ollBar();
+                this.cube.algorithm(ollBar);
             }
         }
     }
