@@ -1,5 +1,6 @@
 public class Solver {
     //class constants
+    // something
     private int[][] white = {{0, 0, 0},{0, 0, 0}, {0, 0, 0}};
     //class variables
     Cube cube;
